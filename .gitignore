@@ -205,3 +205,46 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# -------------------------------
+# CUSTOM ADDITIONS FOR THIS PROJECT
+# -------------------------------
+
+# Virtual environments (already covered, but redundant for safety)
+.venv/
+.dbt-venv/
+
+# Environment files (secrets)
+.env
+*.env
+*.env.*
+
+# Airflow & Astro project files
+.airflow/
+.astro/
+airflow/.env
+airflow/*.env
+logs/
+plugins/__pycache__/
+
+# Local data & temporary files
+data/**/*
+!data/README.md          # allow a small README to explain dataset location
+
+# Docker override files
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Power BI
+dashboard/*.pbix          # ignore full PBIX files (contain data & creds)
+dashboard/*.pbit          # if you want to keep clean template, you can unignore later
+
+# Jupyter / cache
+.ipynb_checkpoints/
+__pycache__/
+
+# Misc
+*.log
+*.tmp
+*.bak
+
