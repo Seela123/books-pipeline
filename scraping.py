@@ -66,4 +66,4 @@ if __name__ == "__main__":
     output_path = "data/bronze/books_toscrape_raw_cleaned.csv"
     df.to_csv(output_path, index=False)
 
-    print(f"✅ Saved cleaned data to {output_path} — rows: {len(df)}")
+    print(f"Saved cleaned data to {output_path} — rows: {len(df)}")
