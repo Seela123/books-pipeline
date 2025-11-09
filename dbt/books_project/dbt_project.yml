@@ -1,0 +1,17 @@
+name: 'books_project'
+version: '1.0'
+config-version: 2
+profile: 'books_pipeline'
+
+model-paths: ['models']
+target-path: 'target'
+clean-targets: ['target', 'dbt_packages']
+
+models:
+  books_project:
+    bronze:
+      +schema: bronze
+    silver:
+      +schema: silver
+    gold:
+      +schema: gold

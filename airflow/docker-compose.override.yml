@@ -1,0 +1,19 @@
+# docker-compose.override.yml
+services:
+  webserver:
+    env_file:
+      - .env
+    volumes:
+      - ../:/opt/ee   # <— mount the parent folder 'end-to-end'
+
+  scheduler:
+    env_file:
+      - .env
+    volumes:
+      - ../:/opt/ee
+
+  triggerer:
+    env_file:
+      - .env
+    volumes:
+      - ../:/opt/ee

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: books_scraping
+    schema: bronze
+    tables:
+      - name: books_toscrape
+        description: "Raw scraped books table loaded from Python."

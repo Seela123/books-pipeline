@@ -1,0 +1,10 @@
+models:
+  - name: price_books
+    description: "look how many books with what price we have"
+    columns:
+      - name: price_range
+        description: "price range"
+        tests:
+          - not_null
+      - name: total books
+        description: "how many books we have with what kind of price "

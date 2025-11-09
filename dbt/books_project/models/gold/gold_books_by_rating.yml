@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: gold_books_by_rating
+    description: "Aggregated book statistics by rating (avg, min, max, count)"
+    columns:
+      - name: rating
+        description: "Book rating"
+        tests:
+          - not_null
+      - name: avg_price_rating
+        description: "Average price per rating"
+      - name: max_price_on_rating
+        description: "Maximum price per rating"
+      - name: min_price_on_rating
+        description: "Minimum price per rating"
+      - name: total_books_rating
+        description: "Total number of books for each rating"

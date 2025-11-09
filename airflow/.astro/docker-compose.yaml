@@ -1,0 +1,30 @@
+﻿services:
+  postgres:
+    image: postgres:18
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Abetare_1
+      - POSTGRES_DB=airflow
+    ports:
+      - "5433:5432"
+
+  scheduler:
+    build: .
+    depends_on:
+      - postgres
+    volumes:
+      - ..:/opt/ee
+
+  webserver:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "8081:8080"
+    volumes:
+      - ..:/opt/ee
+
+  triggerer:
+    build: .
+    depends_on:
+      - postgres
