@@ -6,7 +6,6 @@ import os
 from pathlib import Path
 import sys
 
-# --- CONFIGURATION ---
 PROJ_ROOT = "/opt/ee"
 CSV_PATH  = f"{PROJ_ROOT}/data/bronze/books_toscrape_raw_cleaned.csv"
 SCRAPER   = f"{PROJ_ROOT}/scraping.py"
@@ -46,7 +45,7 @@ with DAG(
             f"postgresql+psycopg2://{os.getenv('PG_USER')}:{os.getenv('PG_PASSWORD')}@{os.getenv('PG_HOST')}:{os.getenv('PG_PORT')}/{os.getenv('PG_DB')}"
         )
         df.to_sql("books_toscrape", engine, schema="bronze", if_exists="replace", index=False)
-        print("✅ Bronze table updated successfully.")
+        print("Bronze table updated successfully.")
 
     load_bronze = PythonOperator(
         task_id="load_to_bronze",
