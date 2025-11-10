@@ -82,7 +82,7 @@ Then open http://localhost:8080, unpause the DAG, and trigger the pipeline.
 Create a file named airflow/.env:
 
 env
-Copy code
+
 PG_HOST=host.docker.internal
 
 PG_PORT=5433
@@ -131,8 +131,6 @@ books_pipeline:
 Run inside the container:
 
 bash
-
-Copy code
 
 astro dev bash
 
