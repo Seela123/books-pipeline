@@ -144,13 +144,17 @@ Server: localhost:5433
 Database: books_scraping
 Load: analytics_gold.gold_books_by_rating
 
-- Example Dashboard Previews
-Books by Rating:
 
-<img width="993" height="489" alt="image" src="https://github.com/user-attachments/assets/df7e7a92-a5b6-4c82-bab0-f04d7871cbbe" />
+### 📸 Example Dashboard Previews
+
+**Books by Rating**  
+![Books by Rating](dashboard/books_dashboard_page1.png)
+
+**Books by Price Range**  
+![Books by Price Range](dashboard/books_dashboard_page2.png)
 
 
-Books by Price Range
+
 
 🪪 License
 MIT License © 2025 Selman Bytyqi
